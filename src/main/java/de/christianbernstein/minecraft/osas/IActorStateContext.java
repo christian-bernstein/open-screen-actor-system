@@ -16,11 +16,12 @@ public interface IActorStateContext {
     List<ItemStack> getSimpleState(@NonNull int width);
 
     @SuppressWarnings("unchecked")
-    IActorStateContext set(@NonNull final ItemStack itemStack, @NonNull Vec2D<Integer>... vec2D);
+    IActorStateContext set(@NonNull final ItemStack itemStack, @NonNull final Vec2D<Integer>... vec2D);
 
-    IActorStateContext fill(@NonNull final ItemStack itemStack, @NonNull Vec2D<Integer> pos1, @NonNull Vec2D<Integer> pos2);
+    IActorStateContext fill(@NonNull final ItemStack itemStack, @NonNull final Vec2D<Integer> pos1, @NonNull final Vec2D<Integer> pos2);
 
-    IActorStateContext fill(@NonNull final Supplier<ItemStack> itemStackSupplier, final ItemStack fillEmptyItemStack, @NonNull Vec2D<Integer> pos1, @NonNull Vec2D<Integer> pos2);
+    IActorStateContext fill(@NonNull final Supplier<ItemStack> itemStackSupplier, final ItemStack fillEmptyItemStack,
+                            @NonNull final Vec2D<Integer> pos1, @NonNull final Vec2D<Integer> pos2);
 
     IActorStateContext remove(@NonNull final Vec2D<Integer> vec2D);
 

@@ -7,6 +7,9 @@ import lombok.NonNull;
  */
 public interface IWidget {
 
-    void render(@NonNull final IActor actor, @NonNull final Vec2D<Integer> translation);
+    @NonNull
+    Vec2D<Integer> getOrigin();
+
+    void render(@NonNull final IActor actor);
 
 }
