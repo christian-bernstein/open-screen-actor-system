@@ -1,6 +1,5 @@
 package de.christianbernstein.minecraft.osas.configuration;
 
-import de.christianbernstein.minecraft.osas.configuration.IMeta;
 import lombok.Builder;
 import lombok.RequiredArgsConstructor;
 
