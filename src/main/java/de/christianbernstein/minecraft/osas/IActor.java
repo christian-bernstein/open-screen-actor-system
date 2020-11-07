@@ -2,6 +2,7 @@ package de.christianbernstein.minecraft.osas;
 
 import lombok.NonNull;
 import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Consumer;
@@ -11,15 +12,23 @@ import org.bukkit.util.Consumer;
  */
 public interface IActor {
 
-    void set(@NonNull int slot, ItemStack itemStack);
+    void set(@NonNull int slot, @NonNull ItemStack itemStack, @NonNull String action);
 
     void add(@NonNull ItemStack itemStack, Consumer<IActor> ifFull);
 
-    void addWidget(@NonNull IWidget widget);
+    @NonNull
+    int calcFreeSlots();
 
     @NonNull
-    Inventory build();
+    InventoryType getInventoryType();
 
     @NonNull
-    Player getOwner(); 
+    Player getOwner();
+
+    @NonNull
+    boolean onComplete();
+
+    @NonNull
+    Inventory compile();
+
 }
