@@ -1,11 +1,6 @@
 package de.christianbernstein.minecraft.osas;
 
-import com.google.common.util.concurrent.AtomicDouble;
 import lombok.*;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 
 /**
  * @author Christian Bernstein

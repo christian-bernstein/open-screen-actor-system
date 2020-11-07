@@ -2,9 +2,9 @@ package de.christianbernstein.minecraft.osas.configuration;
 
 import lombok.NonNull;
 import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
 
 import java.util.List;
-import java.util.Locale;
 
 /**
  * @author Christian Bernstein
@@ -24,15 +24,23 @@ public interface IItemStackWrapper {
     int getAmount();
 
     @NonNull
-    boolean isgGlowing();
+    boolean isGlowing();
 
-    void setTitle(@NonNull Locale locale, @NonNull String title);
+    @NonNull
+    Meta getMeta();
 
-    void setLore(@NonNull List<String> lore);
+    void setTitle(@NonNull LocalizedString title);
+
+    void setLore(@NonNull List<LocalizedString> lore);
 
     void setMaterial(@NonNull Material material);
 
     void setAmount(@NonNull int amount);
 
     void setGlowing(@NonNull boolean glowing);
+
+    void setMeta(@NonNull Meta meta);
+
+    @NonNull
+    ItemStack toItemStack();
 }
