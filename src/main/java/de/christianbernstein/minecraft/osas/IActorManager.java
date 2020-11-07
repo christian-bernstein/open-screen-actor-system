@@ -1,4 +1,4 @@
-package de.christianbernstein.minecraft.osas.beta;
+package de.christianbernstein.minecraft.osas;
 
 import lombok.NonNull;
 import org.bukkit.inventory.Inventory;

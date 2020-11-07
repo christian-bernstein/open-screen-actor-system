@@ -49,6 +49,7 @@ public final class Vec2D<T extends Number> implements Comparable<Vec2D<T>> {
         @NonNull
         private final OrthogonalAngle angle;
 
+        /*
         // todo complete implementation
         private Iterator<Vec2D<T>> calc(@NonNull final double delta){
             final List<Vec2D<T>> vec2Ds = new ArrayList<>();
@@ -62,5 +63,6 @@ public final class Vec2D<T extends Number> implements Comparable<Vec2D<T>> {
             }
             return vec2Ds.iterator();
         }
+         */
     }
 }
